@@ -55,7 +55,7 @@ function App() {
     <div className=" grid grid-cols-1  place-items-center   ">
       <div>
         <div className="px-4 py-3  flex text-right space-between sm:px-6">
-          <Link to="/add">
+          <Link to="/add-products">
             <button
               type="submit"
               className="inline-flex justify-center mx-4 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-700  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"

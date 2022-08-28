@@ -10,7 +10,7 @@ export default function routes() {
       <Routes>
         <Route path="/" element={<App />} />
 
-        <Route path="/add" element={<AddProduct />} />
+        <Route path="/add-products" element={<AddProduct />} />
       </Routes>
     </Router>
   );

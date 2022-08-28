@@ -13,7 +13,7 @@ export default function AddProduct() {
     name: "",
 
     price: "",
-    product_type: "",
+    product_type: "dvd",
     product_attribute: "",
     width: "",
     height: "",
@@ -30,9 +30,11 @@ export default function AddProduct() {
     length,
   } = values;
   const handleChange = (name) => (e) => {
+    setError("");
     setValues({ ...values, [name]: e.target.value });
     console.log(name, e.target.value);
   };
+  // useEffect(() => {})
   const handleCancel = () => {
     setValues({
       sku: "",
@@ -66,6 +68,8 @@ export default function AddProduct() {
       console.log(result);
       if (result.message == "successful") {
         navigate("/");
+      } else {
+        setError(result.message);
       }
     } catch (error) {}
   };
@@ -73,7 +77,8 @@ export default function AddProduct() {
   return (
     <>
       <div className="flex justify-center">
-        <form onSubmit={handleSubmit} className="w-full max-w-lg">
+        {error && <p className="text-red-500 text-lg italic">{error}</p>}
+        <form onSubmit={handleSubmit} className="w-full mt-8 max-w-lg">
           <div className="flex flex-col flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
@@ -120,7 +125,7 @@ export default function AddProduct() {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 for="grid-first-name"
               >
-                Price
+                Price ($)
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
@@ -150,7 +155,6 @@ export default function AddProduct() {
                 // id="grid-state"
                 required
               >
-                <option>select type</option>
                 <option value="dvd">DVD</option>
                 <option value="book">BOOK</option>
                 <option value="furniture">FURNITURE</option>
@@ -176,15 +180,15 @@ export default function AddProduct() {
                 <input
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
-                  type="text"
+                  type="number"
                   placeholder="size"
                   value={product_attribute}
                   onChange={handleChange("product_attribute")}
                   required
                 />
-                {/* <p className="text-red-500 text-xs italic">
-                Please fill out this field.
-              </p> */}
+                <p className="text-red-500 text-xs italic">
+                  Please, provide size
+                </p>
               </div>
             )}
             {product_type === "book" && (
@@ -198,15 +202,15 @@ export default function AddProduct() {
                 <input
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
-                  type="text"
+                  type="number"
                   placeholder="weight"
                   value={product_attribute}
                   onChange={handleChange("product_attribute")}
                   required
                 />
-                {/* <p className="text-red-500 text-xs italic">
-                Please fill out this field.
-              </p> */}
+                <p className="text-red-500 text-xs italic">
+                  Please, provide weight
+                </p>
               </div>
             )}
             {product_type === "furniture" && (
@@ -221,7 +225,7 @@ export default function AddProduct() {
                   <input
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     id="grid-first-name"
-                    type="text"
+                    type="number"
                     placeholder="height"
                     value={height}
                     onChange={handleChange("height")}
@@ -241,7 +245,7 @@ export default function AddProduct() {
                   <input
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     id="grid-first-name"
-                    type="text"
+                    type="number"
                     placeholder="width"
                     value={width}
                     onChange={handleChange("width")}
@@ -261,15 +265,15 @@ export default function AddProduct() {
                   <input
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     id="grid-first-name"
-                    type="text"
-                    placeholder="Jane"
+                    type="number"
+                    placeholder="length"
                     value={length}
                     onChange={handleChange("length")}
                     required
                   />
-                  {/* <p className="text-red-500 text-xs italic">
-                Please fill out this field.
-              </p> */}
+                  <p className="text-red-500 text-xs italic">
+                    Please, provide dimensions
+                  </p>
                 </div>
               </div>
             )}
