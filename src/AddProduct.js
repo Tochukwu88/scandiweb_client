@@ -251,8 +251,7 @@ export default function AddProduct() {
                   </label>
                   <input
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                    id="width
-                    "
+                    id="width"
                     type="number"
                     placeholder="width"
                     value={width}
@@ -272,7 +271,7 @@ export default function AddProduct() {
                   </label>
                   <input
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                    id="lenght"
+                    id="length"
                     type="number"
                     placeholder="length"
                     value={length}
