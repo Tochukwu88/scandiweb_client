@@ -68,7 +68,7 @@ function App() {
             onClick={handleDelete}
             className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
-            DELETE
+            MASS DELETE
           </button>
         </div>
         <div className="grid gap-6 mt-8 md:grid-cols-2 xl:grid-cols-4">

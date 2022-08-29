@@ -71,7 +71,9 @@ export default function AddProduct() {
       } else {
         setError(result.message);
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
