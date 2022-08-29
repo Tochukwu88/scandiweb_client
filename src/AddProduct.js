@@ -13,7 +13,7 @@ export default function AddProduct() {
     name: "",
 
     price: "",
-    product_type: "dvd",
+    product_type: "DVD-disc",
     product_attribute: "",
     width: "",
     height: "",
@@ -162,9 +162,9 @@ export default function AddProduct() {
                 required
                 id="productType"
               >
-                <option value="dvd">DVD</option>
-                <option value="book">BOOK</option>
-                <option value="furniture">FURNITURE</option>
+                <option value="DVD-disc">DVD</option>
+                <option value="Book">BOOK</option>
+                <option value="Furniture">FURNITURE</option>
               </select>
               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                 <svg
@@ -176,7 +176,7 @@ export default function AddProduct() {
                 </svg>
               </div>
             </div>
-            {product_type === "dvd" && (
+            {product_type === "DVD-disc" && (
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -198,7 +198,7 @@ export default function AddProduct() {
                 </p>
               </div>
             )}
-            {product_type === "book" && (
+            {product_type === "Book" && (
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -220,7 +220,7 @@ export default function AddProduct() {
                 </p>
               </div>
             )}
-            {product_type === "furniture" && (
+            {product_type === "Furniture" && (
               <div>
                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                   <label

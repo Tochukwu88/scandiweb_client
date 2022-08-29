@@ -76,10 +76,10 @@ function App() {
             product.map((p) => {
               let attr;
               let ext;
-              if (p.product_type == "dvd") {
+              if (p.product_type == "DVD-disc") {
                 attr = "SIZE";
                 ext = "MB";
-              } else if (p.product_type == "book") {
+              } else if (p.product_type == "Book") {
                 attr = "   WEIGHT";
                 ext = "KG";
               } else {
