@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { getProduct, deleteProduct } from "./utils/apiCalls";
 
 function App() {
-  const client_url = "https://secret-client.vercel.app";
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [product, setProduct] = useState([]);
@@ -14,7 +13,8 @@ function App() {
 
   useEffect(async () => {
     const result = await getProduct();
-    setProduct(result);
+    const data = result ? result : [];
+    setProduct(data);
   }, [count]);
 
   const handleDelete = async () => {
@@ -72,7 +72,7 @@ function App() {
           </button>
         </div>
         <div className="grid gap-6 mt-8 md:grid-cols-2 xl:grid-cols-4">
-          {product.length &&
+          {product.length > 0 &&
             product.map((p) => {
               let attr;
               let ext;

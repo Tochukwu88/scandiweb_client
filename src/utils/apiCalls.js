@@ -1,5 +1,5 @@
 import fetch from "isomorphic-fetch";
-const API = "http://localhost/tuts/products";
+const API = "https://scantiweb-task.000webhostapp.com/products";
 
 export const saveProduct = async (data) => {
   try {
