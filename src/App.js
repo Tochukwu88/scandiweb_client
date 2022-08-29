@@ -60,7 +60,7 @@ function App() {
               type="submit"
               className="inline-flex justify-center mx-4 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-700  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
-              Add
+              ADD
             </button>
           </Link>
           <button
@@ -88,7 +88,12 @@ function App() {
               }
               return (
                 <div class="md:flex bg-white rounded-lg p-6">
-                  <input type="checkbox" value={p.id} onChange={handleSelect} />
+                  <input
+                    type="checkbox"
+                    className="delete-checkbox"
+                    value={p.id}
+                    onChange={handleSelect}
+                  />
                   <div class="text-center">
                     <h2 class="text-lg">SKU:{p.sku}</h2>
                     <div class="text-purple-500">NAME:{p.name}</div>

@@ -80,7 +80,11 @@ export default function AddProduct() {
     <>
       <div className="flex justify-center">
         {error && <p className="text-red-500 text-lg italic">{error}</p>}
-        <form onSubmit={handleSubmit} className="w-full mt-8 max-w-lg">
+        <form
+          onSubmit={handleSubmit}
+          id="product_form"
+          className="w-full mt-8 max-w-lg"
+        >
           <div className="flex flex-col flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
@@ -91,7 +95,7 @@ export default function AddProduct() {
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                id="grid-first-name"
+                id="sku"
                 type="text"
                 placeholder="sku"
                 value={sku}
@@ -111,7 +115,7 @@ export default function AddProduct() {
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                id="grid-first-name"
+                id="name"
                 type="text"
                 placeholder="name"
                 value={name}
@@ -131,7 +135,7 @@ export default function AddProduct() {
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                id="grid-first-name"
+                id="price"
                 type="number"
                 placeholder="price"
                 value={price}
@@ -156,6 +160,7 @@ export default function AddProduct() {
                 // className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 // id="grid-state"
                 required
+                id="productType"
               >
                 <option value="dvd">DVD</option>
                 <option value="book">BOOK</option>
@@ -181,7 +186,7 @@ export default function AddProduct() {
                 </label>
                 <input
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                  id="grid-first-name"
+                  id="size"
                   type="number"
                   placeholder="size"
                   value={product_attribute}
@@ -203,7 +208,7 @@ export default function AddProduct() {
                 </label>
                 <input
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                  id="grid-first-name"
+                  id="weight"
                   type="number"
                   placeholder="weight"
                   value={product_attribute}
@@ -226,7 +231,7 @@ export default function AddProduct() {
                   </label>
                   <input
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                    id="grid-first-name"
+                    id="height"
                     type="number"
                     placeholder="height"
                     value={height}
@@ -246,7 +251,8 @@ export default function AddProduct() {
                   </label>
                   <input
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                    id="grid-first-name"
+                    id="width
+                    "
                     type="number"
                     placeholder="width"
                     value={width}
@@ -266,7 +272,7 @@ export default function AddProduct() {
                   </label>
                   <input
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                    id="grid-first-name"
+                    id="lenght"
                     type="number"
                     placeholder="length"
                     value={length}
