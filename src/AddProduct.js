@@ -60,7 +60,7 @@ export default function AddProduct() {
         product_type,
         product_attribute,
       };
-      if (product_type === "furniture") {
+      if (product_type === "Furniture") {
         let dimension = `${height}x${width}x${length}`;
         payload.product_attribute = dimension;
       }
