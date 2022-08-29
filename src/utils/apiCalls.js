@@ -5,10 +5,10 @@ export const saveProduct = async (data) => {
   try {
     const response = await fetch(`${API}`, {
       method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
+      // headers: {
+      //   Accept: "application/json",
+      //   "Content-Type": "application/json",
+      // },
       body: JSON.stringify(data),
     });
     return response.json();
@@ -18,12 +18,12 @@ export const saveProduct = async (data) => {
 };
 export const deleteProduct = async (data) => {
   try {
-    const response = await fetch(`${API}`, {
-      method: "DELETE",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
+    const response = await fetch(`${API}/delete`, {
+      method: "POST",
+      // headers: {
+      //   Accept: "application/json",
+      //   "Content-Type": "application/json",
+      // },
       body: JSON.stringify(data),
     });
     return response.json();
@@ -35,10 +35,10 @@ export const getProduct = async (hash) => {
   try {
     const response = await fetch(`${API}`, {
       method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
+      // headers: {
+      //   Accept: "application/json",
+      //   "Content-Type": "application/json",
+      // },
     });
     return response.json();
   } catch (error) {
